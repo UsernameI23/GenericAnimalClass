@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 // define a generics class named Student
 public class Animal<T>
 {
@@ -11,7 +11,12 @@ public class Animal<T>
         this.data = data;
         Console.WriteLine("Data passed: " + this.data);
     }
+    public T getAnimal()
+    {
+        return data;
+    }
 }
+
 
 class Program
 {
@@ -26,13 +31,14 @@ class Program
        
         Animal<string> animalHabitat = new Animal<string>("forest");
 
-        
-        var endangered = false;
-        Console.WriteLine(endangered);
-        var extinct = false;
-        Console.WriteLine(extinct);
+        Animal<bool>endangered=new Animal<bool>(false);
+
+        Animal<bool> extinct = new Animal<bool>(false);
+        //var endangered = false;
+        //Console.WriteLine(endangered);
+        //var extinct = false;
+        // Console.WriteLine(extinct);
     }
 }
-
 
 
